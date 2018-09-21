@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="jsk-template"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="appName"></requiredProperty>
+        <requiredProperty key="groupId"></requiredProperty>
+        <requiredProperty key="artifactId"></requiredProperty>
+        <requiredProperty key="package"></requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>Dockerfile</include>
+                <include>start.sh</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <modules>
+        <module id="biz" dir="biz" name="biz">
+            <fileSets>
+                <!--
+                    <fileset>是要包含的文件
+                    filtered="true"标识下面提到的${}是否要进行替换
+                    packaged="true"标识把groupId拼接到directory后面
+                -->
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="boot" dir="boot" name="boot">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.yml</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>apidoc.json</include>
+                        <include>docheader.md</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="call" dir="call" name="call">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="client" dir="client" name="client">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                </fileSet>
+
+            </fileSets>
+        </module>
+
+        <module id="common" dir="common" name="common">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="config" dir="config" name="config">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="openservice" dir="openservice" name="demo-openservice">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>

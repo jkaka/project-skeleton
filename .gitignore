@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+target/
