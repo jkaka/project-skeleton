@@ -65,6 +65,49 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.kaka</groupId>
+                <artifactId>autoCode-maven-plugin</artifactId>
+                <version>3.0.1-SNAPSHOT</version>
+                <configuration>
+                    <codeVO>
+                        <!--服务提供方-->
+                        <sysCode>${appName}</sysCode>
+                        <rootPackage>${groupId}</rootPackage>
+                        <!--服务调用方-->
+                        <dubboConsumerSysCode>project-template-consumer</dubboConsumerSysCode>
+                        <consumerRootPackage>com.kaka.template.consumer</consumerRootPackage>
+                        <generatePath>E:\workspace\generateCode\${rootArtifactId}</generatePath>
+                    </codeVO>
+                    <dataSource>
+                        <property>
+                            <name>driver</name>
+                            <value>com.mysql.jdbc.Driver</value>
+                        </property>
+                        <property>
+                            <name>user</name>
+                            <value>root</value>
+                        </property>
+                        <property>
+                            <name>db_type</name>
+                            <value>mysql</value>
+                        </property>
+                        <property>
+                            <name>password</name>
+                            <value>root</value>
+                        </property>
+                        <property>
+                            <name>host</name>
+                            <value>localhost:3306</value>
+                        </property>
+                        <property>
+                            <name>dbname</name>
+                            <value>tsp_ad</value>
+                        </property>
+                    </dataSource>
+                </configuration>
+            </plugin>
+
             <!--  -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
