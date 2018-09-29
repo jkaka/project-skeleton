@@ -179,9 +179,9 @@
                 <version>${maven-source.version}</version>
                 <configuration>
                     <attach>true</attach>
-                    <source>${java.version}</source>
+                    <!--<source>${java.version}</source>
                     <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <encoding>${project.build.sourceEncoding}</encoding>-->
                 </configuration>
                 <executions>
                     <execution>
@@ -196,21 +196,21 @@
     <repositories>
         <repository>
             <id>nexus-release</id>
-            <url>http://n.xchanger.cn/nexus/content/repositories/releases/</url>
+            <url>http://**/nexus/content/repositories/releases/</url>
         </repository>
         <repository>
             <id>nexus-snapshot</id>
-            <url>http://n.xchanger.cn/nexus/content/repositories/snapshots/</url>
+            <url>http://n.**.cn/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshot</id>
-            <url>http://n.xchanger.cn/nexus/content/repositories/snapshots/</url>
+            <url>http://n.**.cn/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-release</id>
-            <url>http://n.xchanger.cn/nexus/content/repositories/releases/</url>
+            <url>http://n.**.cn/nexus/content/repositories/releases/</url>
         </repository>
     </distributionManagement>
 </project>
