@@ -75,9 +75,9 @@
                         <sysCode>${appName}</sysCode>
                         <rootPackage>${groupId}</rootPackage>
                         <!--服务调用方-->
-                        <dubboConsumerSysCode>project-template-consumer</dubboConsumerSysCode>
-                        <consumerRootPackage>com.kaka.template.consumer</consumerRootPackage>
-                        <generatePath>E:\workspace\generateCode\${rootArtifactId}</generatePath>
+                        <dubboConsumerSysCode>${appName}</dubboConsumerSysCode>
+                        <consumerRootPackage>${groupId}</consumerRootPackage>
+                        <generatePath>E:\workspace\generateCode\\${rootArtifactId}</generatePath>
                     </codeVO>
                     <dataSource>
                         <property>

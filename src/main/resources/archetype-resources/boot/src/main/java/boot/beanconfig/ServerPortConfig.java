@@ -20,6 +20,7 @@ public class ServerPortConfig implements EmbeddedServletContainerCustomizer{
     @Autowired
     private AppProperties appProperties;
 
+    @Override
     public void customize(ConfigurableEmbeddedServletContainer container){
         container.setPort(appProperties.getServerPort());
     }
