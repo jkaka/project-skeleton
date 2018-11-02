@@ -208,6 +208,12 @@
         <repository>
             <id>nexus-snapshot</id>
             <url>http://n.**.cn/nexus/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>
+                    interval:1
+                </updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
     <distributionManagement>
