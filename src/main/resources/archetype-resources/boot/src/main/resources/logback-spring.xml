@@ -8,18 +8,18 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoder 默认配置为PatternLayoutEncoder -->
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
     </appender>
 
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/logs/info.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
+            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/info.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
         <!--日志文件最大的大小-->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -29,11 +29,11 @@
 
     <appender name="monitorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/logs/monitor.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
+            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/monitor.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
         </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
         <!--日志文件最大的大小-->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -42,11 +42,11 @@
     </appender>
     <appender name="openserviceFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/logs/openservice.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
+            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/openservice.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
         </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
         <!--日志文件最大的大小-->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -55,11 +55,11 @@
     </appender>
     <appender name="callFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/logs/call.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
+            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/call.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
         </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
         <!--日志文件最大的大小-->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -68,11 +68,11 @@
     </appender>
     <appender name="kafkaFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/logs/kafka.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
+            <FileNamePattern>${symbol_dollar}{LOG_PATH}${rootArtifactId}/kafka.${rootArtifactId}.%d{yyyy-MM-ddHH}.log</FileNamePattern>
         </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%c] [%L] -> traceId:[%X{traceId}] - [%msg]%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}---[%thread]---%-5level---[%c]---[%L]---[traceId:%X{traceId}]---%msg%n</pattern>
         </encoder>
         <!--日志文件最大的大小-->
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
