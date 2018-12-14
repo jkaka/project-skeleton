@@ -23,16 +23,8 @@
             <artifactId>${appName}-openservice</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -68,16 +60,22 @@
             <plugin>
                 <groupId>com.kaka</groupId>
                 <artifactId>autoCode-maven-plugin</artifactId>
-                <version>3.0.1-SNAPSHOT</version>
+                <version>2.0-SNAPSHOT</version>
                 <configuration>
                     <codeVO>
                         <!--服务提供方-->
                         <sysCode>${appName}</sysCode>
                         <rootPackage>${groupId}</rootPackage>
+                        <uriPrefix>${appName}</uriPrefix>
                         <!--服务调用方-->
-                        <dubboConsumerSysCode>${appName}</dubboConsumerSysCode>
+                        <consumerSysCode>${appName}</consumerSysCode>
                         <consumerRootPackage>${groupId}</consumerRootPackage>
+                        <consumerUriPrefix>${appName}</consumerUriPrefix>
+                        <!--要生成代码的表名-->
+                        <tableNameList>pets</tableNameList>
+                        <!--代码生成路径-->
                         <generatePath>E:\workspace\generateCode\\${rootArtifactId}</generatePath>
+                        <!--<codeStatus>old</codeStatus>-->
                     </codeVO>
                     <dataSource>
                         <property>
