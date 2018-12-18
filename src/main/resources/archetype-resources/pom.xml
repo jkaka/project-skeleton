@@ -7,14 +7,18 @@
     <packaging>pom</packaging>
     <version>${version}</version>
     <properties>
+        <${appName}.version>${version}</${appName}.version>
+
         <kaka.common>1.0-SNAPSHOT</kaka.common>
+        <tbschedule.version>3.3.3.2</tbschedule.version>
+        <appllo-client.version>1.0.2</appllo-client.version>
+
         <spring.version>4.3.10.RELEASE</spring.version>
         <spring-session.version>2.0.0.BUILD-SNAPSHOT</spring-session.version>
         <druid.version>1.0.31</druid.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring_boot.version>1.5.4.RELEASE</spring_boot.version>
-        <${appName}.version>${version}</${appName}.version>
         <jwt.version>3.1.0</jwt.version>
         <commons_lang3.version>3.0</commons_lang3.version>
         <mysql.version>5.1.21</mysql.version>
@@ -22,10 +26,8 @@
         <maven-source.version>3.0.1</maven-source.version>
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
         <fastjson.version>1.2.35</fastjson.version>
-        <tbschedule.version>3.3.3.2</tbschedule.version>
         <common.io.version>2.5</common.io.version>
         <common-codec.version>1.10</common-codec.version>
-        <appllo-client.version>1.0.2</appllo-client.version>
         <spring-cloud.version>1.2.3.RELEASE</spring-cloud.version>
     </properties>
     <dependencyManagement>
