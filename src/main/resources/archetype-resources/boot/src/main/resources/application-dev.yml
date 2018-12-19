@@ -82,7 +82,7 @@ logging:
 
 mybatis:
     config-locations: classpath:mybatis/mybatis-config.xml
-    mapper-locations: classpath:${packageInPathFormat}/dataobject/*.xml
+    mapper-locations: classpath:${packageInPathFormat}/biz/mapper/*.xml
     type-aliases-package: ${groupId}.dataobject
 
 

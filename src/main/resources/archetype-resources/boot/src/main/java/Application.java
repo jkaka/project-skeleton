@@ -9,7 +9,7 @@ import org.springframework.${artifactId}.SpringApplication;
 import org.springframework.${artifactId}.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("${package}.mapper")
+@MapperScan("${package}.biz.mapper")
 public class Application {
 
     public static void main(String[] args) {

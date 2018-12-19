@@ -14,5 +14,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({})
-public class TestSuits {
+public interface TestSuits {
+    String token = "***";
+    String accept = ";responseformat=3";
 }
