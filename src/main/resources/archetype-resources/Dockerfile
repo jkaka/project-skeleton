@@ -1,5 +1,8 @@
 FROM maven:3-jdk-8-alpine
 MAINTAINER jsk <999@test.com.cn>
+
+RUN mkdir -p  /home/admin/${artifactId}
+
 ENV app_name="${artifactId}"
 ENV work_dir="/home/admin/$app_name"
 

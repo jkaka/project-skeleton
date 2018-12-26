@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @Date Wed Dec 19 13:56:31 CST 2018
  */
 @RestControllerAdvice
-public class ExceptionHandlerCustomizer extends WebExceptionHandle {
+public class ExceptionHandlerCustomizer extends WebExceptionHandler {
 }
